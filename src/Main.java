@@ -61,6 +61,9 @@ public class Main {
 
                     car1.setSpeed(speedUp);
                     System.out.println("Aumentando a velocidade...");
+
+                    break;
+
                 case 4:
                     if (!car1.isOn()) {
                         System.out.println("O carro precisa estar ligado!");
@@ -77,7 +80,22 @@ public class Main {
 
                     break;
 
+                case 5:
+                    if (!car1.isOn()) {
+                        System.out.println("O carro precisa estar ligado!");
+                        break;
+                    }
 
+                    System.out.println("Virar para qual direção?\n1 - Direita\n2 - Esquerda\n");
+                    int direction = scanner.nextInt();
+
+                    if (direction == 1){
+                        car1.turnRight();
+                    } else {
+                        car1.turnLeft();
+                    }
+
+                    break;
             }
 
         }

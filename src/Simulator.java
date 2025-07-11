@@ -30,4 +30,12 @@ public class Simulator {
     public void setSpeed(double speed) {
         this.speed = speed;
     }
+
+    public void turnRight() {
+        System.out.println("Virando a direita --->");
+    }
+
+    public void turnLeft() {
+        System.out.println("<--- Virando a esquerda");
+    }
 }
