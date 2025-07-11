@@ -13,6 +13,7 @@ public class Main {
         }
 
         double increaseSpeed = 0.00;
+        double decreaseSpeed = 0.00;
 
         int option = 0;
 
@@ -56,10 +57,26 @@ public class Main {
                         break;
                     }
 
-                    double speed = increaseSpeed += 10;
+                    double speedUp = increaseSpeed += 10;
 
-                    car1.setSpeed(speed);
+                    car1.setSpeed(speedUp);
                     System.out.println("Aumentando a velocidade...");
+                case 4:
+                    if (!car1.isOn()) {
+                        System.out.println("O carro precisa estar ligado!");
+                        break;
+                    }
+
+                    // Se a velocidade for mais ou igual a 10
+                    if (car1.getSpeed() >= 10){
+                        double speedDown = decreaseSpeed -= 10;
+                        System.out.println("Diminuindo a velocidade...");
+                    } else {
+                        System.out.println("O carro está parado!");
+                    }
+
+                    break;
+
 
             }
 
