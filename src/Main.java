@@ -73,6 +73,7 @@ public class Main {
                     // Se a velocidade for mais ou igual a 10
                     if (car1.getSpeed() >= 10){
                         double speedDown = decreaseSpeed -= 10;
+                        car1.setSpeed(speedDown);
                         System.out.println("Diminuindo a velocidade...");
                     } else {
                         System.out.println("O carro está parado!");
