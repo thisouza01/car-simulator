@@ -27,8 +27,12 @@ public class Simulator {
         this.gear = gear;
     }
 
-    public void setSpeed(double speed) {
-        this.speed = speed;
+    public void increaseSpeed() {
+        this.speed += 10;
+    }
+
+    public void decreaseSpeed() {
+        this.speed -= 10;
     }
 
     public void turnRight() {

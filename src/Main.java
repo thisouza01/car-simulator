@@ -57,9 +57,7 @@ public class Main {
                         break;
                     }
 
-                    double speedUp = increaseSpeed += 10;
-
-                    car1.setSpeed(speedUp);
+                    car1.increaseSpeed();
                     System.out.println("Aumentando a velocidade...");
 
                     break;
@@ -72,8 +70,7 @@ public class Main {
 
                     // Se a velocidade for mais ou igual a 10
                     if (car1.getSpeed() >= 10){
-                        double speedDown = decreaseSpeed -= 10;
-                        car1.setSpeed(speedDown);
+                        car1.decreaseSpeed();
                         System.out.println("Diminuindo a velocidade...");
                     } else {
                         System.out.println("O carro está parado!");
@@ -97,6 +94,9 @@ public class Main {
                     }
 
                     break;
+
+                case 6:
+                    System.out.printf("O carro está à %s Km/h.\n", car1.getSpeed());
             }
 
         }
