@@ -18,28 +18,28 @@ public class Simulator {
     }
 
     // setters
-
     public static void setOn(boolean on) {
         isRunning = on;
     }
 
-    public void setGear(int gear) {
-        this.gear = gear;
-    }
-
+    // Velocidade
     public void increaseSpeed() {
         this.speed += 10;
     }
-
     public void decreaseSpeed() {
         this.speed -= 10;
     }
 
+    // Direção
     public void turnRight() {
         System.out.println("Virando a direita --->");
     }
-
     public void turnLeft() {
         System.out.println("<--- Virando a esquerda");
+    }
+
+    // Marcha
+    public void setGear(int gear) {
+
     }
 }

@@ -98,6 +98,24 @@ public class Main {
                 case 6:
                     System.out.printf("O carro está à %s Km/h.\n", car1.getSpeed());
 
+                case 7:
+                    double carSpeed = car1.getSpeed();
+                    // troca de marcha
+                    if(carSpeed == 0){
+                        car1.setGear(0);
+                    } else if (carSpeed > 0 && carSpeed <= 20) {
+                        car1.setGear(1);
+                    } else if (carSpeed > 20 && carSpeed <= 40) {
+                        car1.setGear(2);
+                    } else if (carSpeed > 40 && carSpeed <= 60) {
+                        car1.setGear(3);
+                    } else if (carSpeed > 60 && carSpeed <= 80) {
+                        car1.setGear(4);
+                    } else if (carSpeed > 80 && carSpeed <= 100) {
+                        car1.setGear(5);
+                    } else if (carSpeed > 100 && carSpeed <= 120) {
+                        car1.setGear(6);
+                    }
             }
 
         }
