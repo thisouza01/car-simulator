@@ -97,6 +97,7 @@ public class Main {
 
                 case 6:
                     System.out.printf("O carro está à %s Km/h.\n", car1.getSpeed());
+
             }
 
         }
