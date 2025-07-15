@@ -46,8 +46,13 @@ public class Main {
                       break;
                     }
 
-                    Simulator.setOn(false);
-                    System.out.println("Carro desligou!");
+                    if (car1.getSpeed() == 0){
+                        Simulator.setOn(false);
+                        System.out.println("Carro desligou!");
+                        break;
+                    }
+
+                    System.out.println("O carro precisa estar parado para desligar!");
                     break;
 
                 case 3:
