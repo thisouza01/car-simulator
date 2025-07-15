@@ -84,16 +84,21 @@ public class Main {
                         break;
                     }
 
-                    System.out.println("Virar para qual direção?\n1 - Direita\n2 - Esquerda\n");
-                    int direction = scanner.nextInt();
+                    if (car1.getSpeed() >= 1 && car1.getSpeed() <= 40) {
+                        System.out.println("Virar para qual direção?\n1 - Direita\n2 - Esquerda\n");
+                        int direction = scanner.nextInt();
 
-                    if (direction == 1){
-                        car1.turnRight();
+                        if (direction == 1){
+                            car1.turnRight();
+                        } else {
+                            car1.turnLeft();
+                        }
+                        break;
+
                     } else {
-                        car1.turnLeft();
+                        System.out.println("O carro precisa estar a pelo menos entre 1 - 40 Km/h para poder fazer a curva!");
+                        break;
                     }
-
-                    break;
 
                 case 6:
                     System.out.printf("O carro está à %s Km/h.\n", car1.getSpeed());
