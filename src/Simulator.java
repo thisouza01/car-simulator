@@ -25,9 +25,11 @@ public class Simulator {
     // Velocidade
     public void increaseSpeed() {
         this.speed += 10;
+        updateGear(speed);
     }
     public void decreaseSpeed() {
         this.speed -= 10;
+        updateGear(speed);
     }
 
     // Direção
@@ -39,7 +41,28 @@ public class Simulator {
     }
 
     // Marcha
-    public void setGear(int gear) {
-
+    public void updateGear(double carSpeed) {
+        if(carSpeed == 0){
+            gear = 0;
+            System.out.println("Marcha: Neutro");
+        } else if (carSpeed > 0 && carSpeed <= 20) {
+            gear = 1;
+            System.out.println("Marcha: Primeira");
+        } else if (carSpeed > 20 && carSpeed <= 40) {
+            gear = 2;
+            System.out.println("Marcha: Segunda");
+        } else if (carSpeed > 40 && carSpeed <= 60) {
+            gear = 3;
+            System.out.println("Marcha: Terceira");
+        } else if (carSpeed > 60 && carSpeed <= 80) {
+            gear = 4;
+            System.out.println("Marcha: Quarta");
+        } else if (carSpeed > 80 && carSpeed <= 100) {
+            gear = 5;
+            System.out.println("Marcha: Quinta");
+        } else if (carSpeed > 100 && carSpeed <= 120) {
+            gear = 6;
+            System.out.println("Marcha: Sexta");
+        }
     }
 }
